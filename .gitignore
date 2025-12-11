@@ -50,5 +50,3 @@ spring.log
 src/main/resources/application.yml
 application*.properties
 application*.yml
-
-README.md
