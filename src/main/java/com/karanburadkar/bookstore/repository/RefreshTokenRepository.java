@@ -1,0 +1,16 @@
+package com.karanburadkar.bookstore.repository;
+
+import com.karanburadkar.bookstore.entity.RefreshToken;
+import com.karanburadkar.bookstore.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface RefreshTokenRepository extends JpaRepository<RefreshToken, Long> {
+
+  Optional<RefreshToken> findByRefreshToken(String refreshToken);
+
+  Optional<RefreshToken> findByUser(User user);
+
+  boolean existsByRefreshToken(String refreshToken);
+}
